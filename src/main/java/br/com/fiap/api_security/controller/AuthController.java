@@ -4,7 +4,7 @@ import br.com.fiap.api_security.dto.AuthDTO;
 import br.com.fiap.api_security.dto.RegisterDTO;
 import br.com.fiap.api_security.model.User;
 import br.com.fiap.api_security.repository.UserRepository;
-import jakarta.validation.valid;
+import jakarta.validation.Valid;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ public class AuthController {
         var userPwd = new UsernamePasswordAuthenticationToken(
                 authDTO.username(),
                 authDTO.password());
-        var auth = this.authenticationManager.authenticate(userPwd);
+        //var auth = this.authenticationManager.authenticate(userPwd);
         return ResponseEntity.ok().build();
     }
 

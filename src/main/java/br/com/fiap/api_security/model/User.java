@@ -19,6 +19,9 @@ public class User implements UserDetails {
     private String password;
     private UserRole role;
 
+    public User(String username, String encryptedPwd, UserRole role) {
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         if (UserRole.ADMIN.equals(role)) {
